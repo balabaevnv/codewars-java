@@ -20,7 +20,7 @@ package com.nikolas.codewars.kyu8;
  *
  *  📈 Сложность: O(1) время | O(1) память
  *
- * @see <a href="https://www.codewars.com/kata/53da3dbb4a5168369a0000fe">Задача на Codewars</a>
+ *  🔗 https://www.codewars.com/kata/53da3dbb4a5168369a0000fe
  */
 public final class EvenOrOdd {
 
@@ -33,7 +33,7 @@ public final class EvenOrOdd {
      *
      *  Побитовое И вместо остатка от деления:
      *     — number & 1 — одна машинная инструкция AND
-     *     — number % 2 — инструкция DIV (в 3-5× медленнее)
+     *     — number % 2 — инструкция DIV (в 3-5x медленнее)
      *     — Корректно для отрицательных чисел (two's complement)
      *
      * @param number целое число

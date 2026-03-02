@@ -18,7 +18,7 @@ package com.nikolas.codewars.kyu8;
  *
  *  📈 Сложность: O(1) время | O(1) память
  *
- * @see <a href="https://www.codewars.com/kata/56dec885c54a926dcd001095">Задача на Codewars</a>
+ *  🔗 https://www.codewars.com/kata/56dec885c54a926dcd001095
  */
 public final class OppositeNumber {
 

@@ -19,7 +19,7 @@ package com.nikolas.codewars.kyu8;
  *
  *  📈 Сложность: O(n) время | O(1) память
  *
- * @see <a href="https://www.codewars.com/kata/5715eaedb436cf5606000381">Задача на Codewars</a>
+ *  🔗 https://www.codewars.com/kata/5715eaedb436cf5606000381
  */
 public final class SumOfPositive {
 
@@ -32,7 +32,7 @@ public final class SumOfPositive {
      *
      *  Почему for-each, а не Stream:
      *     — 0 аллокаций (Stream создаёт 5+ служебных объектов)
-     *     — ~5× быстрее на массивах до 10 000 элементов
+     *     — В 5x быстрее на массивах до 10 000 элементов
      *     — Пустой массив и все-отрицательные корректно дают 0
      *
      * @param arr массив целых чисел

@@ -18,7 +18,7 @@ package com.nikolas.codewars.kyu8;
  *
  *  📈 Сложность: O(1) время | O(1) память
  *
- * @see <a href="https://www.codewars.com/kata/53369039d7ab3ac506000467">Задача на Codewars</a>
+ *  🔗 https://www.codewars.com/kata/53369039d7ab3ac506000467
  */
 public final class ConvertBooleanValuesToStringsYesOrNo {
 

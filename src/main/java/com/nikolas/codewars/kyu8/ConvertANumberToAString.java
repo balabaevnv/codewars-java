@@ -19,7 +19,7 @@ package com.nikolas.codewars.kyu8;
  *  📈 Сложность: O(d) время | O(d) память
  *     где d = количество цифр числа
  *
- * @see <a href="https://www.codewars.com/kata/5265326f5fda8eb1160004c8">Задача на Codewars</a>
+ *  🔗 https://www.codewars.com/kata/5265326f5fda8eb1160004c8
  */
 public final class ConvertANumberToAString {
 

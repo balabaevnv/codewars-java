@@ -19,7 +19,7 @@ package com.nikolas.codewars.kyu8;
  *
  *  📈 Сложность: O(n) время | O(n) память
  *
- * @see <a href="https://www.codewars.com/kata/5168bb5dfe9a00b126000018">Задача на Codewars</a>
+ *  🔗 https://www.codewars.com/kata/5168bb5dfe9a00b126000018
  */
 public final class ReversedStrings {
 
