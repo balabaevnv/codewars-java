@@ -6,7 +6,6 @@
 [![Maven](https://img.shields.io/badge/Maven-3.9-C71A36?logo=apachemaven&logoColor=white)](https://maven.apache.org/)
 [![JUnit5](https://img.shields.io/badge/JUnit-5.11-25A162?logo=junit5&logoColor=white)](https://junit.org/junit5/)
 [![CI](https://github.com/balabaevnv/codewars-java/actions/workflows/ci.yml/badge.svg)](https://github.com/balabaevnv/codewars-java/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Решения задач [Codewars](https://www.codewars.com/) на Java 21 — каждое с оценкой сложности, обоснованием выбора алгоритма и параметризованными тестами.
 
@@ -46,7 +45,6 @@ mvn test -Dtest=EvenOrOddTest
 codewars-java/
 ├── pom.xml
 ├── README.md
-├── LICENSE
 ├── .github/workflows/ci.yml
 └── src/
     ├── main/java/com/nikolas/codewars/
