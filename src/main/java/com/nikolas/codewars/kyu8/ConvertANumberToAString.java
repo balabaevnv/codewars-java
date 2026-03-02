@@ -1,18 +1,23 @@
 package com.nikolas.codewars.kyu8;
 
 /**
- * 🎯 <strong>Codewars:</strong> <a href="https://www.codewars.com/kata/5265326f5fda8eb1160004c8">Convert a Number to a String</a><br><br>
- *
- * <strong>📋 Задача:</strong> Преобразовать целое число в строковое представление<br>
- *
- * <strong>📊 Примеры:</strong><br>
- * <code>123</code> ➜ <code>"123"</code><br>
- * <code>-7</code> ➜ <code>"-7"</code><br>
- * <code>0</code> ➜ <code>"0"</code><br><br>
- *
- * <strong>⚡ Решение:</strong> <code>Integer.toString(num)</code> — 1 JVM инструкция, 0 аллокаций<br><br>
- *
- * <strong>📈 Сложность:</strong> O(d) время | O(d) память (d = количество цифр)
+ 🎯 Codewars: Convert a Number to a String
+ 🔗 https://www.codewars.com/kata/5265326f5fda8eb1160004c8
+
+ 📋 Задача: int -> String
+ 📊 Примеры:
+ 123 -> "123"
+ -7  -> "-7"
+ 0   -> "0"
+
+ ⚡ Решение: Integer.toString(num)
+ ⏱️ O(d) время, d=количество цифр
+ 💾 0 аллокаций (String Pool)
+
+ Почему лучше:
+ - Нет String.valueOf() оберток
+ - Нет StringBuilder
+ - Нет конкатенации "+"
  */
 public final class ConvertANumberToAString {
 
@@ -21,15 +26,11 @@ public final class ConvertANumberToAString {
     }
 
     /**
-     * <strong>Алгоритм:</strong> <code>Integer.toString(int)</code> — нативная JVM оптимизация<br>
-     * <ul>
-     * <li>✅ Без <code>String.valueOf()</code> оберток</li>
-     * <li>✅ Без конкатенации строк</li>
-     * <li>✅ Без <code>StringBuilder</code> аллокаций</li>
-     * </ul>
-     *
-     * @param num целое число (-2³¹ до 2³¹-1)
-     * @return строковое представление числа
+     Integer.toString(int) - нативная JVM оптимизация
+     Работает с отрицательными, нулём, INT_MIN/MAX
+
+     @param num целое число
+     @return строковое представление
      */
     public static String numberToString(final int num) {
         return Integer.toString(num);
