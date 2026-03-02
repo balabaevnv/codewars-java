@@ -54,10 +54,8 @@ codewars-java/
 └── src/
     ├── main/java/com/nikolas/codewars/
     │   ├── kyu8/       ← 8 kyu решения
-    │   ├── kyu7/       ← 7 kyu (будущие)
     └── test/java/com/nikolas/codewars/
-        ├── kyu8/       ← тесты 8 kyu
-        ├── kyu7/
+        ├── kyu8/       ← 8 kyu тесты 
 ```
 ---
 
@@ -107,8 +105,3 @@ Checkout → Setup JDK 21 (Temurin) → Cache ~/.m2 → mvn test
 | GitHub | [balabaevnv](https://github.com/balabaevnv) |
 | Codewars | [M_ass_TER](https://www.codewars.com/users/M_ass_TER) |
 
----
-
-## Лицензия
-
-[MIT](LICENSE) — свободное использование, копирование, модификация.
