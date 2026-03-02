@@ -15,19 +15,12 @@
 
 ## Решения
 
-### 8 kyu
+| Уровень | Решено | Папка |
+|:-------:|:------:|-------|
+| 8 kyu | 7 | [src/main/java/.../kyu8/](src/main/java/com/nikolas/codewars/kyu8/) |
 
-| # | Задача | Время | Память | Алгоритм | Тесты |
-|--:|--------|:-----:|:------:|----------|:-----:|
-| 1 | [Even or Odd](https://www.codewars.com/kata/53da3dbb4a5168369a0000fe) | O(1) | O(1) | `number & 1` — побитовая проверка LSB | 8 |
-| 2 | [Reversed Strings](https://www.codewars.com/kata/5168bb5dfe9a00b126000018) | O(n) | O(n) | `StringBuilder.reverse()` — Unicode-safe | 5 |
-| 3 | [Convert Number to String](https://www.codewars.com/kata/5265326f5fda8eb1160004c8) | O(d) | O(d) | `Integer.toString()` — прямой вызов без обёрток | 6 |
-| 4 | [Return Negative](https://www.codewars.com/kata/55685cd7ad70877c23000102) | O(1) | O(1) | `x > 0 ? -x : x` — без overflow через Math.abs | 7 |
-| 5 | [Boolean to String](https://www.codewars.com/kata/53369039d7ab3ac506000467) | O(1) | O(1) | `b ? "Yes" : "No"` — литералы из String Pool | 4 |
-| 6 | [Sum of Positive](https://www.codewars.com/kata/5715eaedb436cf5606000381) | O(n) | O(1) | `for-each` с аккумулятором, 0 аллокаций | 9 |
-| 7 | [Opposite Number](https://www.codewars.com/kata/56dec885c54a926dcd001095) | O(1) | O(1) | `-number` — одна инструкция `ineg` | 6 |
+Каждый файл содержит Javadoc с условием задачи, ссылкой на Codewars, описанием алгоритма и оценкой Big-O.
 
-**7 задач · 45 тестов · Java 21 · JUnit 5 · AssertJ**
 ---
 
 ## Быстрый старт
@@ -47,6 +40,7 @@ mvn test -Dtest=EvenOrOddTest
 # Собрать проект
 mvn clean package
 ```
+
 ---
 
 ## Структура проекта
@@ -56,22 +50,14 @@ codewars-java/
 ├── pom.xml
 ├── README.md
 ├── LICENSE
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-├── src/
-│   ├── main/java/com/nikolas/codewars/
-│   │   └── kyu8/
-│   │       ├── EvenOrOdd.java
-│   │       ├── ReversedStrings.java
-│   │       ├── ConvertANumberToAString.java
-│   │       ├── ReturnNegative.java
-│   │       ├── ConvertBooleanValuesToStringsYesOrNo.java
-│   │       ├── SumOfPositive.java
-│   │       └── OppositeNumber.java
-│   └── test/java/com/nikolas/codewars/
-│       └── kyu8/
-│           └── *Test.java
+├── .github/workflows/ci.yml
+└── src/
+    ├── main/java/com/nikolas/codewars/
+    │   ├── kyu8/       ← 8 kyu решения
+    │   ├── kyu7/       ← 7 kyu (будущие)
+    └── test/java/com/nikolas/codewars/
+        ├── kyu8/       ← тесты 8 kyu
+        ├── kyu7/
 ```
 ---
 
