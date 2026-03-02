@@ -44,6 +44,7 @@ mvn test -Dtest=EvenOrOddTest
 ```text
 codewars-java/
 ├── pom.xml
+├── .gitignore
 ├── README.md
 ├── .github/workflows/ci.yml
 └── src/
