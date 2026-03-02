@@ -1,23 +1,25 @@
 package com.nikolas.codewars.kyu8;
 
 /**
- 🎯 Codewars: Convert a Number to a String
- 🔗 https://www.codewars.com/kata/5265326f5fda8eb1160004c8
-
- 📋 Задача: int -> String
- 📊 Примеры:
- 123 -> "123"
- -7  -> "-7"
- 0   -> "0"
-
- ⚡ Решение: Integer.toString(num)
- ⏱️ O(d) время, d=количество цифр
- 💾 0 аллокаций (String Pool)
-
- Почему лучше:
- - Нет String.valueOf() оберток
- - Нет StringBuilder
- - Нет конкатенации "+"
+ * ════════════════════════════════════════════════════════════
+ *  🎯 Codewars: Convert a Number to a String
+ * ════════════════════════════════════════════════════════════
+ *
+ *  📋 Задача:
+ *     Преобразовать целое число в строковое представление.
+ *
+ *  📊 Примеры:
+ *     123  →  "123"
+ *     -7   →  "-7"
+ *     0    →  "0"
+ *
+ *  ⚡ Решение:
+ *     Integer.toString(num) — прямой вызов без обёрток.
+ *
+ *  📈 Сложность: O(d) время | O(d) память
+ *     где d = количество цифр числа
+ *
+ * @see <a href="https://www.codewars.com/kata/5265326f5fda8eb1160004c8">Задача на Codewars</a>
  */
 public final class ConvertANumberToAString {
 
@@ -26,11 +28,16 @@ public final class ConvertANumberToAString {
     }
 
     /**
-     Integer.toString(int) - нативная JVM оптимизация
-     Работает с отрицательными, нулём, INT_MIN/MAX
-
-     @param num целое число
-     @return строковое представление
+     * Преобразует целое число в строку.
+     *
+     *  Почему Integer.toString():
+     *     — Прямой вызов без обёртки String.valueOf()
+     *     — Без конкатенации ("" + num)
+     *     — Без StringBuilder аллокаций
+     *     — Без String.format() оверхеда
+     *
+     * @param num целое число (от -2³¹ до 2³¹-1)
+     * @return строковое представление числа
      */
     public static String numberToString(final int num) {
         return Integer.toString(num);

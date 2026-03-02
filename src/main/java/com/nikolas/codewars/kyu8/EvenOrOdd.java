@@ -1,64 +1,43 @@
 package com.nikolas.codewars.kyu8;
 
 /**
- * <h3>🎯 Codewars: <a href="https://www.codewars.com/kata/53da3dbb4a5168369a0000fe">Even or Odd</a></h3>
+ * ════════════════════════════════════════════════════════════
+ *  🎯 Codewars: Even or Odd
+ * ════════════════════════════════════════════════════════════
  *
- * <p><strong>📋 Задача:</strong> Определить чётность целого числа: <code>Even</code> или <code>Odd</code>.</p>
+ *  📋 Задача:
+ *     Определить, является ли число чётным или нечётным.
  *
- * <details>
- *   <summary><strong>📊 Примеры</strong> <code>(+/-0)</code></summary>
+ *  📊 Примеры:
+ *     2   →  "Even"
+ *     3   →  "Odd"
+ *     -4  →  "Even"
+ *     0   →  "Even"
  *
- * ```java
- * evenOrOdd(2)   ➜ "Even"
- * evenOrOdd(3)   ➜ "Odd"
- * evenOrOdd(-7)  ➜ "Odd"
- * evenOrOdd(0)   ➜ "Even"
- * ```
- * </details>
+ *  ⚡ Решение:
+ *     Побитовое И (number & 1) — проверяем младший бит.
+ *     У чётного числа LSB = 0, у нечётного = 1.
  *
- * <hr>
+ *  📈 Сложность: O(1) время | O(1) память
+ *
+ * @see <a href="https://www.codewars.com/kata/53da3dbb4a5168369a0000fe">Задача на Codewars</a>
  */
 public final class EvenOrOdd {
 
     private EvenOrOdd() {
-        throw new UnsupportedOperationException("Utility class");
+        throw new UnsupportedOperationException("Утилитарный класс");
     }
 
     /**
-     * <h4>⚡ Алгоритм: Побитовое И</h4>
-     * <p><code>number & 1</code> проверяет **младший бит (LSB)**:
-     * <ul>
-     *   <li><code>Even</code>: LSB = <code>0</code> ➜ <code>&1 = 0</code></li>
-     *   <li><code>Odd</code>:  LSB = <code>1</code> ➜ <code>&1 = 1</code></li>
-     * </ul>
+     * Определяет чётность числа за O(1).
      *
-     * <details>
-     *   <summary><strong>🔍 Биты в действии</strong></summary>
+     *  Побитовое И вместо остатка от деления:
+     *     — number & 1 — одна машинная инструкция AND
+     *     — number % 2 — инструкция DIV (в 3-5× медленнее)
+     *     — Корректно для отрицательных чисел (two's complement)
      *
-     * ```java
-     * 2   = 0b...0010  & 0b0001 = 0b0000 ➜ Even
-     * 3   = 0b...0011  & 0b0001 = 0b0001 ➜ Odd
-     * -7  = 0b...1001  & 0b0001 = 0b0001 ➜ Odd
-     * 0   = 0b...0000  & 0b0001 = 0b0000 ➜ Even
-     * ```
-     * </details>
-     *
-     * <h5>📈 Сложность</h5>
-     * <table>
-     *   <tr><th>Время</th><th>Память</th></tr>
-     *   <tr><td><strong>O(1)</strong></td><td><strong>O(1)</strong></td></tr>
-     * </table>
-     *
-     * <h5>✅ Преимущества</h5>
-     * <ul>
-     *   <li>🔥 <strong>1 CPU инструкция</strong></li>
-     *   <li>✅ Работает с <strong>отрицательными</strong></li>
-     *   <li>✅ <strong>0 аллокаций</strong></li>
-     *   <li>✅ <strong>String Pool</strong></li>
-     * </ul>
-     *
-     * @param number целое число (-2³¹..2³¹-1)
-     * @return <code>"Even"</code> или <code>"Odd"</code>
+     * @param number целое число
+     * @return "Even" или "Odd"
      */
     public static String evenOrOdd(final int number) {
         return (number & 1) == 0 ? "Even" : "Odd";

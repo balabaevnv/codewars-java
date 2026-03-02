@@ -1,20 +1,24 @@
 package com.nikolas.codewars.kyu8;
 
 /**
- * <h3>🎯 Codewars: <a href="https://www.codewars.com/kata/53369039d7ab3ac506000467">Convert boolean values to strings 'Yes' or 'No'</a></h3>
+ * ════════════════════════════════════════════════════════════
+ *  🎯 Codewars: Convert a Boolean to a String
+ * ════════════════════════════════════════════════════════════
  *
- * <p><strong>📋 Задача:</strong> Преобразовать boolean в строку: <code>true ➜ "Yes"</code>, <code>false ➜ "No"</code>.</p>
+ *  📋 Задача:
+ *     Вернуть "Yes" для true, "No" для false.
  *
- * <details>
- *   <summary><strong>📊 Примеры</strong> <code>(+/-0)</code></summary>
+ *  📊 Примеры:
+ *     true   →  "Yes"
+ *     false  →  "No"
  *
- * ```java
- * boolToWord(true)   ➜ "Yes"
- * boolToWord(false)  ➜ "No"
- * ```
- * </details>
+ *  ⚡ Решение:
+ *     Тернарный оператор — одна инструкция ветвления.
+ *     Литералы из String Pool — ноль аллокаций.
  *
- * <hr>
+ *  📈 Сложность: O(1) время | O(1) память
+ *
+ * @see <a href="https://www.codewars.com/kata/53369039d7ab3ac506000467">Задача на Codewars</a>
  */
 public final class ConvertBooleanValuesToStringsYesOrNo {
 
@@ -23,34 +27,15 @@ public final class ConvertBooleanValuesToStringsYesOrNo {
     }
 
     /**
-     * <h4>⚡ Алгоритм</h4>
-     * <p><code>b ? "Yes" : "No"</code> — тернарный оператор:
-     * <ul>
-     *   <li>✅ <strong>1 инструкция</strong> ветвления</li>
-     *   <li>✅ <code>String Pool</code> — <strong>0 аллокаций</strong></li>
-     *   <li>✅ <strong>Идемпотентно</strong> для повторных вызовов</li>
-     * </ul>
+     * Преобразует boolean в строку "Yes" / "No".
      *
-     * <h5>📈 Сложность</h5>
-     * <table>
-     *   <tr><th>Время</th><th>Память</th></tr>
-     *   <tr><td><strong>O(1)</strong></td><td><strong>O(1)</strong></td></tr>
-     * </table>
-     *
-     * <details>
-     *   <summary><strong>🔍 Альтернативы</strong></summary>
-     *
-     * ```java
-     * // ❌ Длиннее
-     * return b ? "Yes" : "No";
-     *
-     * // ❌ Аллоцирует StringBuilder
-     * return String.valueOf(b);
-     * ```
-     * </details>
+     *  Почему тернарный оператор:
+     *     — Одна инструкция ifeq в байткоде
+     *     — Литералы "Yes"/"No" из String Pool (0 аллокаций)
+     *     — Map.of(true, "Yes", false, "No") — autoboxing + хеширование
      *
      * @param b булево значение
-     * @return <code>"Yes"</code> или <code>"No"</code>
+     * @return "Yes" или "No"
      */
     public static String boolToWord(final boolean b) {
         return b ? "Yes" : "No";

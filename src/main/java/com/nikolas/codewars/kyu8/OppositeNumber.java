@@ -1,21 +1,24 @@
 package com.nikolas.codewars.kyu8;
 
 /**
- * <h3>🎯 Codewars: <a href="https://www.codewars.com/kata/56dec885c54a926dcd001095">Opposite number</a></h3>
+ * ════════════════════════════════════════════════════════════
+ *  🎯 Codewars: Opposite Number
+ * ════════════════════════════════════════════════════════════
  *
- * <p><strong>📋 Задача:</strong> Вернуть аддитивную инверсию числа (<code>+n ➜ -n</code>, <code>-n ➜ +n</code>).</p>
+ *  📋 Задача:
+ *     Вернуть противоположное число (аддитивную инверсию).
  *
- * <details>
- *   <summary><strong>📊 Примеры</strong> <code>(+/-0)</code></summary>
+ *  📊 Примеры:
+ *     1    →  -1
+ *     -34  →  34
+ *     0    →  0
  *
- * ```java
- * opposite(4)   ➜ -4
- * opposite(-7)  ➜ 7
- * opposite(0)   ➜ 0
- * ```
- * </details>
+ *  ⚡ Решение:
+ *     Унарный минус — одна инструкция ineg в байткоде JVM.
  *
- * <hr>
+ *  📈 Сложность: O(1) время | O(1) память
+ *
+ * @see <a href="https://www.codewars.com/kata/56dec885c54a926dcd001095">Задача на Codewars</a>
  */
 public final class OppositeNumber {
 
@@ -24,42 +27,14 @@ public final class OppositeNumber {
     }
 
     /**
-     * <h4>⚡ Алгоритм: Унарный минус</h4>
-     * <p><code>-number</code> = <strong>1 JVM инструкция {@code ineg}</strong>:
-     * <ul>
-     *   <li>🔥 <code>0</code> вызовов методов</li>
-     *   <li>🔥 <code>0</code> ветвлений</li>
-     *   <li>🔥 <code>0</code> аллокаций памяти</li>
-     * </ul>
+     * Возвращает противоположное число.
      *
-     * <details>
-     *   <summary><strong>🔍 Байткод JVM</strong></summary>
+     *  Почему унарный минус, а не Math.negateExact():
+     *     — Одна машинная инструкция NEG
+     *     — negateExact бросает ArithmeticException на MIN_VALUE
+     *     — number * -1 заставляет JIT оптимизировать лишнее умножение
      *
-     * ```java
-     * // Компиляция -number:
-     * ineg           // ← ОДНА инструкция!
-     * ireturn
-     * ```
-     * </details>
-     *
-     * <h5>📈 Сложность</h5>
-     * <table>
-     *   <tr><th>Время</th><th>Память</th></tr>
-     *   <tr><td><strong>O(1)</strong></td><td><strong>O(1)</strong></td></tr>
-     * </table>
-     *
-     * <h5>✅ Почему лучше альтернатив</h5>
-     * <details>
-     *   <summary>Сравнение</summary>
-     *
-     * | Метод | Инструкций JVM | Аллокаций |
-     * |-------|----------------|-----------|
-     * | <code>-number</code> | **1** | **0** |
-     * | <code>0-number</code> | **3** | **0** |
-     * | <code>number * -1</code> | **4** | **0** |
-     * </details>
-     *
-     * @param number целое число (-2³¹..2³¹-1)
+     * @param number целое число
      * @return противоположное число
      */
     public static int opposite(final int number) {
