@@ -36,9 +36,6 @@ mvn clean test
 
 # Запустить тесты одного класса
 mvn test -Dtest=EvenOrOddTest
-
-# Собрать проект
-mvn clean package
 ```
 
 ---
@@ -67,7 +64,6 @@ codewars-java/
 | Сборка | Apache Maven | 3.9 |
 | Тестирование | JUnit Jupiter | 5.11 |
 | Утверждения | AssertJ | 3.27 |
-| Логирование | SLF4J + Logback | 2.0 / 1.5 |
 | CI/CD | GitHub Actions | JDK 21 Temurin |
 
 ---

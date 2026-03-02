@@ -19,14 +19,8 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- ✅ АКТУАЛЬНЫЕ версии - март 2026 -->
         <junit.version>5.11.4</junit.version>
-        <!-- AssertJ 3.25.3 - стабильная, без CVE -->
-        <assertj.version>3.25.3</assertj.version>
-        <!-- SLF4J стабильная -->
-        <slf4j.version>2.0.13</slf4j.version>
-        <!-- Logback стабильная LTS -->
-        <logback.version>1.4.14</logback.version>
+        <assertj.version>3.27.7</assertj.version>
     </properties>
 
     <dependencies>
@@ -52,20 +46,6 @@
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
             <scope>test</scope>
-        </dependency>
-
-        <!-- SLF4J API -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-
-        <!-- Logback LTS -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
         </dependency>
     </dependencies>
 
