@@ -16,7 +16,7 @@
 
 | Уровень | Решено | Папка |
 |:-------:|:------:|-------|
-| 8 kyu |   60   | [src/main/java/.../kyu8/](src/main/java/com/nikolas/codewars/kyu8/) |
+| 8 kyu |   87   | [src/main/java/.../kyu8/](src/main/java/com/nikolas/codewars/kyu8/) |
 
 Каждый файл содержит Javadoc с условием задачи, ссылкой на Codewars, описанием алгоритма и оценкой Big-O.
 
