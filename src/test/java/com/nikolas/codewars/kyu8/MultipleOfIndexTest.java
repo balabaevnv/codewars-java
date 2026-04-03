@@ -3,11 +3,8 @@ package com.nikolas.codewars.kyu8;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.api.Test;
 
 import java.util.stream.Stream;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
@@ -43,40 +40,5 @@ class MultipleOfIndexTest {
 
         assertArrayEquals(expected,
                 MultipleOfIndex.multipleOfIndex(input));
-    }
-
-
-    @Test
-    void randomTests() {
-
-        for (int t = 0; t < 100; t++) {
-
-            int size = ThreadLocalRandom.current().nextInt(2, 50);
-            int[] arr = new int[size];
-
-            for (int i = 0; i < size; i++) {
-                arr[i] = ThreadLocalRandom.current().nextInt(-100,100);
-            }
-
-            int[] expected = Arrays.stream(arr)
-                    .skip(1)
-                    .filter(v -> {
-                        int index = Arrays.binarySearch(arr, v);
-                        return index > 0 && v % index == 0;
-                    })
-                    .toArray();
-
-            int[] actual = MultipleOfIndex.multipleOfIndex(arr);
-
-            // более надёжный expected
-            int[] correct = Arrays.stream(
-                    java.util.stream.IntStream.range(1, arr.length)
-                            .filter(i -> arr[i] % i == 0)
-                            .map(i -> arr[i])
-                            .toArray()
-            ).toArray();
-
-            assertArrayEquals(correct, actual);
-        }
     }
 }

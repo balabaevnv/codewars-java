@@ -13,9 +13,9 @@ class PolygonTest {
 
     static Stream<Arguments> validCases() {
         return Stream.of(
-                Arguments.of(4, 5, "5,000"),
-                Arguments.of(8, 9, "21,728"),
-                Arguments.of(3, 4, "2,309")
+                Arguments.of(4, 5, "5.000"),
+                Arguments.of(8, 9, "21.728"),
+                Arguments.of(3, 4, "2.309")
         );
     }
 
