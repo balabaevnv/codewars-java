@@ -23,18 +23,16 @@ public final class HolidayVISharkPontoon {
 
     public static String shark(int pontoonDistance, int sharkDistance,
                                int youSpeed, int sharkSpeed, boolean dolphin) {
-
-        // Подождите, дайте проверю…
-        if (dolphin) {
-            sharkSpeed /= 2;
-        }
-
-        // О, я упустил… избегаем деления (быстрее)
-        // pontoonDistance / youSpeed < sharkDistance / sharkSpeed
-        // => pontoonDistance * sharkSpeed < sharkDistance * youSpeed
-
+        // youTime = pontoonDistance * sharkSpeed
         long youTime = (long) pontoonDistance * sharkSpeed;
+        // sharkTime = sharkDistance * youSpeed
         long sharkTime = (long) sharkDistance * youSpeed;
+
+        // Если есть дельфин, скорость акулы уменьшается вдвое,
+        // что эквивалентно увеличению sharkTime в 2 раза.
+        if (dolphin) {
+            sharkTime *= 2;
+        }
 
         return youTime < sharkTime ? "Alive!" : "Shark Bait!";
     }
